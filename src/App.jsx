@@ -27,7 +27,7 @@ const App = () => {
     }
 
   return (
-    <div className="h-screen lg:flex bg-black text-white">
+    <div className="h-screen lg:flex bg-black text-black">
       <form
         onSubmit={(e ) => {
           submitHandler(e);
@@ -65,7 +65,7 @@ const App = () => {
           {task.map(function(elem,idx) {
             return <div key={idx} className="flex justify-between flex-col items-start  relative h-52 w-40 rounded-xl pt-9 pb-4 px-4  text-black bg-cover bg-[url('https://imgs.search.brave.com/Sy8UrNAAls611Pvu8Qi3_FVBoZyXVIsAj5GPLUEsNik/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzcv/MTUyLzY3Ny9zbWFs/bC9zdGlja3ktbm90/ZS1wYXBlci1iYWNr/Z3JvdW5kLWZyZWUt/cG5nLnBuZw')]">
               <h3 className="leading-tight font-xl font-bold">{elem.title}</h3>
-              <p className="mb-5 leading-tight font-medium text-gray-500">{elem.details}</p>
+              <p className="mt-4 leading-tight font-medium text-gray-500">{elem.details}</p>
               <button onClick={() => {
                 deleteNote(idx)
               }} className="w-full text-white bg-red-600 py-1 text-xs rounded font-bold cursor-pointer active:scale-95">Delete Note</button>
